@@ -1,0 +1,142 @@
+/* Newspaper-style CSS */
+:root{
+  --paper-bg: #fffdfa;
+  --ink: #0b0b0b;
+}
+*{box-sizing:border-box}
+body{
+  font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+  color:var(--ink);
+  background:var(--paper-bg);
+  margin:0;
+  padding:1rem 1.5rem;
+  line-height:1.45;
+}
+.masthead{
+    text-align:left;
+    margin-bottom:0.5rem
+}
+.masthead-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline}
+.paper-name{
+    font-family:'Fraunces', 'Libre Baskerville', serif;
+    font-size:3.2rem;
+    margin:0;
+    letter-spacing:1px
+}
+.edition{
+    font-size:0.9rem;
+    margin:0.15rem 0;
+    color:#222
+}
+.price{
+    font-weight:700
+}
+.rule{
+    border:none;
+    border-top:3px solid #000;
+    margin:0.5rem 0 1rem
+}
+
+
+.container{
+    max-width:1100px;
+    margin:0 auto
+}
+.front-headline{
+    font-size:5.2rem;
+    text-align:center;
+    margin:0.25rem 0 1rem;
+    font-weight:900;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    font-family:'Fraunces', serif}
+.byline{
+    font-size:0.9rem;
+    margin:0 0 0.8rem;
+    color:#444}
+
+.grid{
+    display:grid;
+    grid-template-columns:220px 1fr 220px;
+    gap:1.6rem;
+    align-items:start
+}
+.col{
+    background:transparent
+}
+.mini-article{
+    border-top:1px solid #000;
+    padding-top:0.6rem;
+    margin-bottom:1rem
+}
+.mini-article h3{
+    font-size:1.15rem;
+    margin:0 0 0.25rem;
+    font-weight:700
+}
+.mini-article p{
+    font-size:0.95rem;
+    margin:0 0 0.5rem
+}
+.tiny-credit{
+    font-size:0.75rem;
+    color:#666
+}
+
+.center .feature-image{
+    margin:0 0 0.9rem
+}
+.feature-image img{
+    width:100%;
+    height:auto;
+    display:block;
+    border:6px solid #000;
+    box-shadow:0 0 0 2px #fff inset}
+.feature-image figcaption{
+    font-size:0.78rem;
+    color:#444;
+    margin-top:0.35rem
+}
+
+.lead-article{
+    margin-top:0.4rem
+}
+.article-body{
+    font-size:1rem;
+    text-align:justify;
+    column-count:1}
+.article-body p{
+    orphans:3;
+    widows:3;
+    margin-top:0}
+.dropcap{
+    float:left;
+    font-size:4.4rem;
+    line-height:0.7;
+    padding-right:0.18rem;
+    font-weight:700;
+    font-family:'Libre Baskerville', serif
+}
+
+.page-footer{
+    text-align:center;
+    margin:2rem 0 1rem;
+    font-size:0.85rem;
+    color:#666}
+
+@media (max-width:980px){
+  .grid{grid-template-columns:1fr;}
+  .front-headline{font-size:2.2rem}
+  .paper-name{font-size:2rem}
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    background-image:linear-gradient(transparent, rgba(0,0,0,0.005));
+    mix-blend-mode:multiply}
